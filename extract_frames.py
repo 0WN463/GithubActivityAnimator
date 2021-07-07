@@ -1,5 +1,17 @@
 import cv2
 import sys
+import os
+
+FRAME_FOLDER = "video_frames"
+
+if len(sys.argv) <= 1:
+	print("No video file provided")
+	exit()
+
+try:
+	os.mkdir(FRAME_FOLDER)
+except OSError:
+	pass
 
 video_file = sys.argv[1]
 vidcap = cv2.VideoCapture(video_file)
