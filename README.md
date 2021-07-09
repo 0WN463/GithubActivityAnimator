@@ -14,6 +14,9 @@ The above script will create a folder `video_frames`, and dump all the image fra
 
 ### Conversion of frames to array
 
+There is a choice between using compressed data or uncompressed data.
+Compressed data requires more pre-processing, but code injection will be quicker, vice versa for uncompressed data.
+
 #### (Lossless) Compressed data
 
 Usage: `python dump_compressed_data.py`
