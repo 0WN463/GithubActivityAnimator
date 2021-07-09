@@ -14,13 +14,24 @@ The above script will create a folder `video_frames`, and dump all the image fra
 
 ### Conversion of frames to array
 
+#### (Lossless) Compressed data
+
+Usage: `python dump_compressed_data.py`
+
+The above script will search the `video_frames` array and dump the base64 encoded data to standard output.
+The data is precompressed with Huffman encoding
+
+Example output can be seen in `frame_data_compressed`.
+
+#### Uncompressed data
+
 Usage: `python dump_data.py`
 
 The above script will search the `video_frames` array and dump the formatted (Javascript) array string to standard output.
 
-Example output can be seen in `frame_data`.
+---
 
-Users are advised to redirect the output to their clipboard utility, as per below.
+Users are advised to redirect the output to their clipboard utility to prepare for the next step, as per below.
 
 MacOS: `python dump_data.py | pbcopy`
 
@@ -30,7 +41,9 @@ Linux: `python dump_data.py | xclip`
 
 1. Navigate to your desired GitHub profile
 2. Open the browser console
-3. Type `videoArr =` followed by the array string obtained by the dump. Complete declaration of the variable.
+3. Input the data
+	* (For compressed data) Type `compressedData =` followed by the encoded string from the dump. Complete declaration of the variable.
+	* (For uncompressed data) Type `videoArr =` followed by the array string obtained by the dump. Complete declaration of the variable.
 NOTE: This step is likely to freeze the browser for a while if the array is large.
 4. Insert the script in `github_activity_animator.js` into the console.
 Tweak the `FPS` in the script if need be.
