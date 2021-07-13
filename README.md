@@ -6,6 +6,15 @@ This project contains a simple Javascript snippet that produces an animation on 
 The project also contains simple scripts that completes the pipeline from video files to GitHub activity.
 
 ## User Guide
+### TLDR;
+Usage: `bash end_to_end.sh "VIDEO_FILE.mp4" | "YOUR SYSTEM'S CLIPBOARD UTILITY"`
+
+MacOS: `bash end_to_end.sh "VIDEO_FILE.mp4" | pbcopy`
+
+Linux: `bash end_to_end.sh "VIDEO_FILE.mp4" | xclip`
+
+Then simply paste the copied data into the browser console.
+
 ### Conversion of video to frames
 
 Usage: `python extract_frames.py "VIDEO_FILE.mp4"`
