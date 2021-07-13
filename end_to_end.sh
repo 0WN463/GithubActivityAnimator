@@ -1,3 +1,4 @@
+set -e
 if [ $# -lt 1 ]; then
     echo No video file received
     exit 1
